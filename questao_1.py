@@ -9,8 +9,9 @@ vezes.
 
 def posicoes_alvo(lista, alvo):
     indices = []
-    for index, numero in enumerate(lista):
-        if index + 1 < len(lista):
+    tam = len(lista)
+    for index in range(tam):
+        if index + 1 < tam:
             if lista[index] + lista[index+1] == alvo:
                 indices.extend([index, index+1])
                 break
